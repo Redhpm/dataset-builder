@@ -1,0 +1,7 @@
+fforward-propagate
+fomit-frame-pointer
+fipa-sra
+fexpensive-optimizations
+floop-interchange
+floop-parallelize-all
+fstack-protector-all

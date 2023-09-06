@@ -1,0 +1,17 @@
+{
+    "name": "openssh",
+    "url":  "https://github.com/openssh/openssh-portable",
+    "branch": "V_9_3_P2",
+    "dependencies": [
+        "gcc",
+        "make",
+        "autoconf",
+        "zlib1g-dev"
+    ],
+    "build": [
+        "autoreconf -fi",
+        "CFLAGS=\"-${flag}\" ./configure --without-openssl",
+        "make clean && make"
+    ],
+    "outfiles": ["scp", "sftp", "sftp-server", "ssh", "ssh-add", "ssh-agent", "sshd", "ssh-keygen", "ssh-keyscan", "ssh-keysign"]
+}

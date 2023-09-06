@@ -1,0 +1,21 @@
+{
+    "name": "git",
+    "url":  "https://github.com/git/git.git",
+    "branch": "v2.41.0",
+    "dependencies": [
+        "gcc",
+        "make",
+        "zlib1g-dev",
+        "ssh",
+        "gettext",
+        "autoconf"
+    ],
+    "pre-build": [
+        "make configure"
+    ],
+    "build": [
+        "./configure CFLAGS=\"-${flag}\"",
+        "make clean && NO_CURL=YesPlease NO_PERL=YesPlease NO_OPENSSL=YesPlease NO_EXPAT=YesPlease NO_TCLTK=YesPlease make"
+    ],
+    "outfiles": ["git"]
+}

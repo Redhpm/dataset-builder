@@ -1,0 +1,15 @@
+{
+    "name": "cmus",
+    "url":  "https://github.com/cmus/cmus.git",
+    "branch": "v2.10.0",
+    "dependencies": [
+        "gcc",
+        "make",
+        "libncurses5-dev"
+    ],
+    "build": [
+        "CFLAGS=\"-${flag}\" ./configure",
+        "make clean && make"
+    ],
+    "outfiles": ["cmus"]
+}

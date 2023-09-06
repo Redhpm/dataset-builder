@@ -1,0 +1,16 @@
+{
+    "name": "tcpdump",
+    "url":  "https://github.com/the-tcpdump-group/tcpdump",
+    "branch": "tcpdump-4.99.4",
+    "dependencies": [
+        "gcc",
+        "make",
+        "autoconf",
+        "libpcap-dev"
+    ],
+    "build": [
+        "CFLAGS=\"-${flag}\" ./configure",
+        "make clean && make"
+    ],
+    "outfiles": ["tcpdump"]
+}
